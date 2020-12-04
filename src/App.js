@@ -12,8 +12,8 @@ class App extends React.Component {
   };
 
   async componentDidMount() {
+    document.title = "COVID-19 Tracker";
     const fetchedData = await fetchData();
-    document.title("COVID-19 Tracker");
 
     this.setState({
       data: fetchedData,
