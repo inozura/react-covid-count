@@ -21,7 +21,7 @@ export const fetchData = async (country) => {
       lastUpdate,
     };
   } catch (error) {
-    console.log(error);
+    console.log("error message:", error);
   }
 };
 
@@ -36,7 +36,9 @@ export const fetchDailyData = async () => {
     }));
 
     return newData;
-  } catch (error) {}
+  } catch (error) {
+    console.log("error message:", error);
+  }
 };
 
 export const fetchCountries = async () => {
@@ -46,5 +48,7 @@ export const fetchCountries = async () => {
     } = await axios.get(`${url}/countries`);
 
     return countries.map((country) => country.name);
-  } catch (error) {}
+  } catch (error) {
+    console.log("error message:", error);
+  }
 };
