@@ -1,9 +1,9 @@
-# Forecasting_app
+# covid-tracker_reactApp
 <hr>
-This is Corona virus tracker website, this website can track by global or by country what do you want. The API from mathdro.id and gift realtime data.
+covid-tracker_reactApp is Corona virus tracker website, this website can track by global or by country what do you want. The API from mathdro.id and gift realtime data.
 
 
-You can see the demo on my personal blog website [Demo](https://inozura-covid19.netlify.app/)
+You can see the demo on website [Demo](https://inozura-covid19.netlify.app/)
 
 
 ## Packge Using
