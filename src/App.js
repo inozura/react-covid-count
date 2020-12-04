@@ -13,6 +13,7 @@ class App extends React.Component {
 
   async componentDidMount() {
     const fetchedData = await fetchData();
+    document.title("COVID-19 Tracker");
 
     this.setState({
       data: fetchedData,
@@ -32,7 +33,7 @@ class App extends React.Component {
       <div className={styles.container}>
         <h1>COVID-19 Tracker</h1>
         <p>
-          Code in React by <a  href="https://github.com/inozura">inozura</a>,{" "}
+          Code in React by <a href="https://github.com/inozura">inozura</a>,{" "}
           <span>API by mathdro.id</span>
         </p>
 
