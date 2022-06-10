@@ -15,5 +15,9 @@
 }
 
 .deaths {
+  border-bottom: 10px solid rgba(234, 255, 0, 0.782);
+}
+
+.deathspercentage {
   border-bottom: 10px solid rgba(255, 0, 0, 0.5);
 }

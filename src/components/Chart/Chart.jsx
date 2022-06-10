@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { fetchDailyData } from "../../api";
 import { Line, Bar } from "react-chartjs-2";
+import { Card, CardContent, Grid, Typography } from "@mui/material";
 
 import styles from "./Chart.module.css";
+import CountryPicker from "../CountryPicker/CountryPicker";
 
-const Chart = ({ data, country }) => {
+const Chart = ({ data, country, handleCountryChange }) => {
   const [dailyData, setDailyData] = useState({});
   useEffect(() => {
     const fetchAPI = async () => {
@@ -66,7 +68,36 @@ const Chart = ({ data, country }) => {
   ) : null;
 
   return (
-    <div className={styles.container}>{country ? barChart : lineChart}</div>
+    <Card sx={{ borderRadius: 5, padding: 5, width: "100%" }}>
+      <CardContent
+        sx={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+        }}
+      >
+        <Grid
+          container
+          xs={12}
+          md={6}
+          justifyContent="space-between"
+          alignItems="center"
+          width="100%"
+        >
+          <Typography variant="h4" sx={{ display: "inline-block" }}>
+            Data
+          </Typography>
+          <CountryPicker handleCountryChange={handleCountryChange} />
+        </Grid>
+        <Grid container justifyContent="center" alignItems="center">
+          <div className={styles.container}>
+            {country ? barChart : lineChart}
+          </div>
+        </Grid>
+      </CardContent>
+    </Card>
   );
 };
 
