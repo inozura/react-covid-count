@@ -57,8 +57,15 @@ const App = () => {
         >
           <h1 style={{ textAlign: "center" }}>COVID-19 Tracker</h1>
           <p style={{ textAlign: "center" }}>
-            Code in React by <a href="https://github.com/inozura">inozura</a>,{" "}
-            <span>API by mathdro.id</span>
+            Code in React by{" "}
+            <a
+              href="https://inozura.github.io/my"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              inozura
+            </a>
+            , <span>API by mathdro.id</span>
           </p>
         </Card>
       </FlexContainer>
